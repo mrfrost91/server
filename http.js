@@ -18,4 +18,7 @@ http.createServer(function (req, res) {
             return res.end(data);
         })
     } else {
+        res.writeHead(CODE_FAIL, {'Content-Type': 'text/html'});
+        return res.end(CODE_FAIL + " Not Found");
     }
+}).listen(PORT_NAME);
