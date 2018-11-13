@@ -94,7 +94,7 @@ nav a:hover {
     border-radius: 0 0 5px 5px;
     margin: -254px 0 0 -192px;
     z-index: -1;
-    transition: margin 0.3s cubic-bezier(0.4, 0, 1, 1);
+    transition: margin 0.3s;
 }
 
 .logincontainer-expand {
@@ -105,7 +105,7 @@ nav a:hover {
     border-radius: 0 0 5px 5px;
     margin: 0 0 0 -192px;
     z-index: -1;
-    transition: margin 0.3s cubic-bezier(0.4, 0, 1, 1);
+    transition: margin 0.3s;
 }
 
 .searchcontainer {
@@ -115,6 +115,17 @@ nav a:hover {
     background: inherit;
     border-radius: 0 0 5px 5px;
     margin: -49px 0 0 -246px;
+    z-index: -1;
+    transition: margin 0.3s;
+}
+
+.searchcontainer-expand {
+    position: fixed;
+    height: auto;
+    width: 300px;
+    background: inherit;
+    border-radius: 0 0 5px 5px;
+    margin: 0 0 0 -246px;
     z-index: -1;
     transition: margin 0.3s cubic-bezier(0.4, 0, 1, 1);
 }

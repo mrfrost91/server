@@ -1,1 +1,28 @@
-{{username}}
+<div class="loginicon">
+    <a class="navtext">
+        {{#if user}}
+            <img src="img/usericon.png">
+        {{else}}
+            <img src="img/login3.png">
+        {{/if}}
+    </a>
+    <div id="formcontainer" class="logincontainer">
+        {{#if user}}
+            <div style="display: flex; justify-content: center;">
+                <form id="searchform" action="/logout" method="GET">
+                    Добро пожаловать, {{username}}!
+                    <input type="submit" value="Выйти">
+                </form>
+            </div>
+        {{else}}
+            <form id="loginform" method="post" action="/login">
+                <input type="text" name="username" placeholder="Логин" id="login">
+                <input type="password" name="password" placeholder="Пароль" id="pass">
+                <input type="submit" value="Войти" style="cursor: pointer;">
+                <div style="display: flex; justify-content: center;">
+                    <a href="/register" style="color: initial; cursor: pointer; text-decoration: underline;">Зарегистрироваться.</a>
+                </div>
+            </form>
+        {{/if}}
+    </div>
+</div>
