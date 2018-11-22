@@ -58,7 +58,6 @@ nav a:hover {
 .headercontent {
     display: flex;
     flex-direction: row;
-    background: inherit;
     width: 840px;
     height: 54px;
     align-items: center;
@@ -88,46 +87,28 @@ nav a:hover {
 
 .logincontainer {
     position: fixed;
-    height: auto;
-    width: 300px;
-    background: inherit;
-    border-radius: 0 0 5px 5px;
-    margin: -254px 0 0 -192px;
-    z-index: -1;
-    transition: margin 0.3s;
-}
-
-.logincontainer-expand {
-    position: fixed;
-    height: auto;
     width: 300px;
     background: inherit;
     border-radius: 0 0 5px 5px;
     margin: 0 0 0 -192px;
-    z-index: -1;
-    transition: margin 0.3s;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s;
 }
 
 .searchcontainer {
     position: fixed;
-    height: auto;
-    width: 300px;
-    background: inherit;
-    border-radius: 0 0 5px 5px;
-    margin: -49px 0 0 -246px;
-    z-index: -1;
-    transition: margin 0.3s;
-}
-
-.searchcontainer-expand {
-    position: fixed;
-    height: auto;
     width: 300px;
     background: inherit;
     border-radius: 0 0 5px 5px;
     margin: 0 0 0 -246px;
-    z-index: -1;
-    transition: margin 0.3s cubic-bezier(0.4, 0, 1, 1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.expand {
+    max-height: 300px;
 }
 
 #page {
@@ -221,7 +202,7 @@ footer {
     text-align: center;
 }
 
-.pole {
+.field {
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -229,11 +210,11 @@ footer {
     margin: 0 0 20px 0;
 }
 
-.pole:first-of-type {
-    margin: 0 0 0 0;
+.field:first-of-type {
+    margin: 20px 0 20px 0;
 }
 
-.pole > p {
+.field > p {
     color: #000;
     padding: 0 10px 0 10px;
 

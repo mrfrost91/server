@@ -6,18 +6,18 @@
             <img src="img/login3.png">
         {{/if}}
     </a>
-    {{#if user}}
-            <div id="formcontainer" class="logincontainer">
-                <div style="display: flex; justify-content: center;">
-                    <form id="searchform" action="/logout" method="GET">
-                        Добро пожаловать, {{username}}!
-                        <input type="submit" value="Выйти">
-                    </form>
-                </div>
+{{#if user}}
+        <div id="formcontainer" class="logincontainer">
+            <div style="display: flex; justify-content: center;">
+                <form id="searchform" action="/logout" method="GET">
+                    Добро пожаловать, {{username}}!
+                    <input type="submit" value="Выйти">
+                </form>
             </div>
         </div>
-    {{else}}
-    <div id="formcontainer" class="logincontainer-expand">
+    </div>
+{{else}}
+    <div id="formcontainer" class="logincontainer expand">
         <form id="loginform" method="post" action="/register">
             <input type="text" name="firstname" placeholder="Имя" id="firstname">
             <input type="text" name="lastname" placeholder="Фамилия" id="lastname">
@@ -29,6 +29,5 @@
             </div>
         </form>
     </div>
-</div>
-    {{/if}}
+{{/if}}
 
