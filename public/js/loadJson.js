@@ -29,9 +29,9 @@ loadJson("http://127.0.0.1:8080/items/").then(function(response) {
     jsonLength = jsonArray.length;
     for (i = 0; i < jsonLength; ++i) {
         createField();
-        jsonText = "<h3>" + jsonArray[i].number + ". " + jsonArray[i].name + "</h3>";
+        jsonText = '<h3>' + jsonArray[i].number + ". " + jsonArray[i].name + '</h3>';
         heroName[i].innerHTML = jsonText;
-        heroImg[i].innerHTML = '<img src="img/heroes/' + jsonArray[i].image + '">';
+        heroImg[i].innerHTML = '<img src="img/heroes/' + jsonArray[i].image + '" alt="' + jsonArray[i].name + '">';
         heroText[i].innerHTML = '<p>' + jsonArray[i].description + '</p>';
         valueStr[i].innerText = jsonArray[i].strength;
         valueAgi[i].innerText = jsonArray[i].agility;
