@@ -1,6 +1,7 @@
 var move_up = document.getElementById("button_move_up");
-window.onscroll = function showMoveTop() {
-    if (window.pageYOffset > 0) {
+move_up.addEventListener("click", moveTop);
+window.onscroll = function showMoveTopBtn() {
+    if (window.pageYOffset > 400) {
         move_up.style = "display: block";
     } else {
         move_up.style = "display: none;";

@@ -8,6 +8,10 @@ html, body {
     padding: 0;
 }
 
+#button_move_up {
+    display: none
+}
+
 header {
     height: auto;
     background: #555;
