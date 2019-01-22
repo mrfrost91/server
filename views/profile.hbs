@@ -1,17 +1,17 @@
 <div class="loginicon">
     <a class="navtext">
         {{#if user}}
-            <img src="img/usericon.png">
+            <img src="img/usericon.png" alt="User Icon">
         {{else}}
-            <img src="img/login3.png">
+            <img src="img/login3.png" alt="Login Icon">
         {{/if}}
     </a>
     <div id="formcontainer" class="logincontainer">
         {{#if user}}
             <div style="display: flex; justify-content: center;">
-                <form id="searchform" action="/logout" method="GET">
+                <form id="loginform" action="/logout" method="GET">
                     Добро пожаловать, {{username}}!
-                    <input type="submit" value="Выйти">
+                    <input type="submit" value="Выйти" style="cursor: pointer;">
                 </form>
             </div>
         {{else}}

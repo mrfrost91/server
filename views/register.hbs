@@ -1,33 +1,33 @@
 <div class="loginicon">
     <a class="navtext">
         {{#if user}}
-            <img src="img/usericon.png">
+            <img src="img/usericon.png" alt="User Icon">
         {{else}}
-            <img src="img/login3.png">
+            <img src="img/login3.png" alt="Login Icon">
         {{/if}}
     </a>
-{{#if user}}
+    {{#if user}}
         <div id="formcontainer" class="logincontainer">
             <div style="display: flex; justify-content: center;">
-                <form id="searchform" action="/logout" method="GET">
+                <form id="loginform" action="/logout" method="GET">
                     Добро пожаловать, {{username}}!
                     <input type="submit" value="Выйти">
                 </form>
             </div>
         </div>
-    </div>
-{{else}}
-    <div id="formcontainer" class="logincontainer expand">
-        <form id="loginform" method="post" action="/register">
-            <input type="text" name="firstname" placeholder="Имя" id="firstname">
-            <input type="text" name="lastname" placeholder="Фамилия" id="lastname">
-            <input type="text" name="username" placeholder="Логин" id="login">
-            <input type="password" name="password" placeholder="Пароль" id="pass">
-            <input type="password" name="password2" placeholder="Повторите пароль" id="pass2">
-            <input type="submit" value="Зарегистрироваться" style="cursor: pointer;">
-            <div style="display: flex; justify-content: center;">
-            </div>
-        </form>
-    </div>
-{{/if}}
-
+    {{else}}
+        <div id="formcontainer" class="logincontainer">
+            <form id="loginform" method="post" action="/register">
+                <input type="text" name="firstname" placeholder="Имя" id="firstname">
+                <input type="text" name="lastname" placeholder="Фамилия" id="lastname">
+                <input type="text" name="username" placeholder="Логин" id="login">
+                <input type="password" name="password" placeholder="Пароль" id="pass">
+                <input type="password" name="password2" placeholder="Повторите пароль" id="pass2">
+                <input type="submit" value="Зарегистрироваться" style="cursor: pointer;">
+                <div style="display: flex; justify-content: center;">
+                    <a href="/login" style="color: initial; cursor: pointer; text-decoration: underline;">Войти на сайт.</a>
+                </div>
+            </form>
+        </div>
+    {{/if}}
+</div>

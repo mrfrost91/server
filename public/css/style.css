@@ -4,8 +4,9 @@ html, body {
     background: #ccc url(../img/back.jpg) fixed;
     display: flex;
     width: 100%;
-    height: auto;
+    min-height: 100%;
     padding: 0;
+    position: relative;
 }
 
 #button_move_up {
@@ -108,7 +109,7 @@ nav a:hover {
     margin: 0 0 0 -246px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s;
+    transition: max-height 0.2s;
 }
 
 .expand {
@@ -136,11 +137,11 @@ nav a:hover {
     width: 34px;
 }
 
-.logotext {
+h1 {
     text-transform: uppercase;
-    font-weight: bold;
     font-size: 30px;
     padding-left: 5px;
+    margin: 0;
 }
 
 .navtext {
@@ -200,10 +201,8 @@ footer {
     opacity: 0.85;
     width: 100%;
     text-align: center;
-}
-
-.qw2 {
-    text-align: center;
+    position: absolute;
+    bottom: 0;
 }
 
 .field {
