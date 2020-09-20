@@ -1,10 +1,9 @@
 var express = require('express');
-var dbInstance = require("./get_from_db.js");
+var dbInstance = require("./db/get_from_db.js");
 var router = express();
 var PORT_NAME = 8080;
 var CODE_SUCCESS = 200;
 var CODE_FAIL = 404;
-console.log("namatyvaem kishki 10 minut");
 var bodyParser = require('body-parser')
 
 router.use(bodyParser.urlencoded({ extended: false }))
